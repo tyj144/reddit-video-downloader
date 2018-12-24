@@ -39,7 +39,7 @@ def download_from_url(url):
     name = get_name_from_url(url)
     print('name', name)
 
-    download_file('evfrx', src)
+    download_file(name, src)
 
 if __name__ == "__main__":
     main()
