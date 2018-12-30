@@ -1,6 +1,9 @@
 import requests
 
 def download_file(name, url):
+    import os
+    if not os.path.exists('videos'):
+        os.makedirs('videos')
     name = 'videos/' + name + ".mp4"
     print("Downloading to '%s' from '%s'" % (name, url))
     r = requests.get(url)
